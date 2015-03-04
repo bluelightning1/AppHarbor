@@ -279,6 +279,13 @@
     <Content Include="App_Data\aspnet-MVCAngularJsWebApplication-20150112021705_log.ldf">
       <DependentUpon>aspnet-MVCAngularJsWebApplication-20150112021705.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\millerwebEntities.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\millerwebEntities_log.ldf">
+      <DependentUpon>millerwebEntities.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
