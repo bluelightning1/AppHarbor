@@ -191,6 +191,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LinkController.cs" />
     <Compile Include="Controllers\LinksController.cs" />
@@ -1147,7 +1148,7 @@
     <Content Include="Views\Places\Index.cshtml" />
     <Content Include="Views\Links\Index.cshtml" />
     <Content Include="Views\Places\View.cshtml" />
-    <Content Include="Views\Error.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Manage\" />
