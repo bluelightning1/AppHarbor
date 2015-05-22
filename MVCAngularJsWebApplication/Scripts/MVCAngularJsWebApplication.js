@@ -1,13 +1,13 @@
-﻿var mvcAngularJsWebApplication = angular.module('mvcAngularJsWebApplication', ['ngRoute']);
+﻿var mvcAngularJsWebApplication = angular.module('mvcAngularJsWebApplication', ['ngRoute', 'ui.grid']);
 
-mvcAngularJsWebApplication.factory('LoginFactory', LoginFactory); 
-mvcAngularJsWebApplication.factory('LinksFactory', LinksFactory); 
-//mvcAngularJsWebApplication.factory('RegistrationFactory', RegistrationFactory);
+mvcAngularJsWebApplication.factory('LoginFactory', LoginFactory);
+mvcAngularJsWebApplication.factory('LinksFactory', LinksFactory);
+mvcAngularJsWebApplication.factory('RegistrationFactory', RegistrationFactory);
 mvcAngularJsWebApplication.controller('PlacesController', PlacesController);
 mvcAngularJsWebApplication.controller('MainController', MainController);
 mvcAngularJsWebApplication.controller('AboutController', AboutController);
 mvcAngularJsWebApplication.controller('ContactController', ContactController);
-mvcAngularJsWebApplication.controller('RegisterController', RegisterController);
+mvcAngularJsWebApplication.controller('AccountController', AccountController);
 
 var configFunction = function ($routeProvider, $httpProvider) {
     $routeProvider.
@@ -27,14 +27,13 @@ var configFunction = function ($routeProvider, $httpProvider) {
         })
             // route for the contact page
         .when('/links', {
-            templateUrl: 'Links',
-            controller: PlacesController,
+            templateUrl: 'Places',
+            controller: PlacesController
         })
-          .when('/register', {
-              templateUrl: 'Account/Register',
-              controller: RegisterController,
-          })
-    ;
+        .when('/login', {
+            templateUrl: 'Account/Login',
+            controller: AccountController
+        });
 
     $httpProvider.interceptors.push(['$q', '$location', function ($q, $location) {
         return {
