@@ -3,5 +3,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2>Links</h2>
+<div ng-init="load()">
+    <h2>Favorite Places</h2>
+    <div ng-repeat="link in links">
+        <div>
+            <a target="_blank" href="{{link.Href}}">{{link.DisplayName}}</a>
+        </div>
+    </div>
+</div>
+<pre> {{links}} </pre>

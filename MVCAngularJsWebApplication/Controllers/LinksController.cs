@@ -10,8 +10,8 @@ namespace MVCAngularJsWebApplication.Controllers
 {
     public class LinksController : Controller
     {
-        List<Link> links = new List<Link>();
-        // GET: About
+        //List<Link> links = new List<Link>();
+        //// GET: About
         public ActionResult Index()
         {
             return View();

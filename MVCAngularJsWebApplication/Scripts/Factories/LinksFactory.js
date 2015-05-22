@@ -1,7 +1,7 @@
 ﻿var LinksFactory = function ($http, $q) {
     return function () {
         var deferredObject = $q.defer();
-        $http.get('/api/Links')
+        $http.get('/Login')
                .success(function (data) {
                    if (data == "True") {
                        deferredObject.resolve({ success: true });

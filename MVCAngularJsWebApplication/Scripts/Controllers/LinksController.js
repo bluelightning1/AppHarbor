@@ -1,6 +1,6 @@
-﻿var PlacesController = function ($scope, $http, LinksFactory) {
+﻿var PlacesController = function ($scope, $http) {
     $scope.load = function () {
-        $http.get('/Places/GetAllLinks')
+        $http.get('http://localhost/webapi/api/Links')
        .success(function (data) {
            $scope.links = data;
        })
@@ -10,4 +10,4 @@
     }
 }
 
-PlacesController.$inject = ['$scope', '$http', 'LinksFactory'];
+PlacesController.$inject = ['$scope', '$http'];

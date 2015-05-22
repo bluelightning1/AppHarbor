@@ -1,31 +1,23 @@
-﻿var LoginController = function ($scope, $routeParams, $location,LoginFactory) {
-    $scope.loginForm = {
-        emailAddress: '',
-        password: '',
-        rememberMe: false,
-        returnUrl: $routeParams.returnUrl,
-        loginFailure: false
-    };
+﻿//'use strict';
 
-    $scope.login = function () {
+//angular.module('Authentication')
 
-        var results = LoginFactory($scope.loginForm.emailAddress, $scope.loginForm.password, $scope.loginForm.rememberMe);
+//.controller('LoginController',
+//    ['$scope', '$rootScope', '$location', 'AuthenticationService',
+//    function ($scope, $rootScope, $location, AuthenticationService) {
+//        // reset login status
+//        AuthenticationService.ClearCredentials();
 
-        results.then(function (result) {
-            if (result.success) {
-                if ($scope.loginForm.returnUrl !== undefined) {
-                    alert("succes, but return url !== undefined");
-                    $location.path('/routeOne');
-                } else {
-                    alert("succes, but no return url");
-                    $location.path($scope.loginForm.returnUrl);
-                }
-            } else {
-                $scope.loginForm.loginFailure = true;
-            }
-        });
-
-    }
-}
-
-LoginController.$inject = ['$scope', '$routeParams', '$location', 'LoginFactory'];//, LoginFactory, 'LoginFactory'
+//        $scope.login = function () {
+//            $scope.dataLoading = true;
+//            AuthenticationService.Login($scope.username, $scope.password, function (response) {
+//                if (response.success) {
+//                    AuthenticationService.SetCredentials($scope.username, $scope.password);
+//                    $location.path('/');
+//                } else {
+//                    $scope.error = response.message;
+//                    $scope.dataLoading = false;
+//                }
+//            });
+//        };
+//    }]);
