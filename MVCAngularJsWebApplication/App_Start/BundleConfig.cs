@@ -11,7 +11,6 @@ namespace MVCAngularJsWebApplication
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
-
             //// Use the development version of Modernizr to develop with and learn from. Then, when you're
             //// ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -29,7 +28,9 @@ namespace MVCAngularJsWebApplication
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/Scripts/angular.js",
-                    "~/Scripts/angular-route.js"
+                    "~/Scripts/angular-route.js",
+                    "~/Scripts/angular-spinner.js",
+                    "~/Scripts/spin.js"
                     ));
 
             bundles.Add(new ScriptBundle("~/bundles/uiGrid").Include(

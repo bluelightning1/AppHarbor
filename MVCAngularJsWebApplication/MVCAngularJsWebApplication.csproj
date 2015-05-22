@@ -15,7 +15,7 @@
     <AssemblyName>MVCAngularJsWebApplication</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -301,6 +301,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\spinner.gif" />
     <Content Include="Content\ui-grid-unstable.css" />
     <Content Include="Content\ui-grid-unstable.min.css" />
     <Content Include="favicon.ico" />
@@ -327,6 +328,8 @@
     <Content Include="Scripts\angular-sanitize.js" />
     <Content Include="Scripts\angular-sanitize.min.js" />
     <Content Include="Scripts\angular-scenario.js" />
+    <Content Include="Scripts\angular-spinner.js" />
+    <Content Include="Scripts\angular-spinner.min.js" />
     <Content Include="Scripts\angular-touch.js" />
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
@@ -1101,8 +1104,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="css\ui-grid.ttf" />
-    <Content Include="css\ui-grid.woff" />
     <Content Include="fonts\ui-grid.woff" />
     <Content Include="fonts\ui-grid.ttf" />
     <Content Include="fonts\ui-grid.eot" />
@@ -1121,10 +1122,13 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>millerdcjrModel1.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\angular-spinner.min.js.map" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
     <Content Include="Scripts\jquery-2.1.3.min.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\spin.js" />
+    <Content Include="Scripts\spin.min.js" />
     <Content Include="Scripts\ui-grid-unstable.js" />
     <Content Include="Scripts\ui-grid-unstable.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -1201,9 +1205,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>9445</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/app</IISUrl>
-          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://localhost</IISAppRootUrl>
+          <IISUrl>http://localhost:9445/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

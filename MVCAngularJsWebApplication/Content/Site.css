@@ -1,4 +1,12 @@
-﻿.container {
+﻿html, body {
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+}
+
+.container {
     width: 95%;
 }
 
@@ -8,11 +16,11 @@
 
 .leftJustifiedColumn {
     width: 100%;
-    height:100%;
-    vertical-align:central;
-    padding-left:0.5em;
+    height: 100%;
+    vertical-align: central;
+    padding-left: 0.5em;
     text-align: justify;
-    line-height:2;
+    line-height: 2;
 }
 
 .centeredColumn {
@@ -38,10 +46,21 @@ div.ui-grid-cell input.button {
     text-align: left;
 }
 
+.ajax-spinnerContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5); /*dim the background*/
+}
+
 @media (max-width: 320px) {
     .jumbotron {
     }
-     .fiftyPercent {
+
+    .fiftyPercent {
         margin: 0 auto;
         width: 100%; /* value of your choice which suits your alignment */
     }
@@ -59,5 +78,4 @@ div.ui-grid-cell input.button {
 }
 
 @media (max-width: 720px) {
-
 }

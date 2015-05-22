@@ -1,13 +1,23 @@
 ﻿var PlacesController = function ($scope, $http, LinksFactory) {
+    setLoading($scope, true);
     $scope.isAuthorized = false;
     $scope.links = [];
     $scope.load = function () {
-        LinksFactory.retrieve().success(handleSuccess);
+        LinksFactory.retrieve()
+            .success(handleSuccess)
+            .error(handleError);
     };
 
     var handleSuccess = function (data, status) {
         $scope.links = data;
+        setLoading($scope,false);
     };
+
+    var handleError = function (data, status) {
+        $scope.links = data;
+        setLoading($scope, false);
+    };
+
 
     $scope.gridOptions = {
         data: 'links',
