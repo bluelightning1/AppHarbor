@@ -16,7 +16,7 @@ namespace MVCAngularJsWebApplication.Models
     public partial class millerwebEntities1 : DbContext
     {
         public millerwebEntities1()
-            : base("name=millerwebEntities1")
+            : base("name=millerwebEntities")
         {
         }
     

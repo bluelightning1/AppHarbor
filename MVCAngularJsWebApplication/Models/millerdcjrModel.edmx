@@ -915,7 +915,7 @@
           <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="*" />
           <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="millerwebEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="millerwebEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Addresses" EntityType="Self.Address" />
           <EntitySet Name="aspnet_Applications" EntityType="Self.aspnet_Applications" />
           <EntitySet Name="aspnet_Membership" EntityType="Self.aspnet_Membership" />
@@ -990,7 +990,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="millerwebModelStoreContainer" CdmEntityContainer="millerwebEntities1">
+        <EntityContainerMapping StorageEntityContainer="millerwebModelStoreContainer" CdmEntityContainer="millerwebEntities">
           <EntitySetMapping Name="Addresses">
             <EntityTypeMapping TypeName="millerwebModel.Address">
               <MappingFragment StoreEntitySet="Addresses">
